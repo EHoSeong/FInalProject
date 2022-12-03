@@ -1,23 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 body>:first-child>li {
+	text-align: center;
 	display: inline-block;
-	width: 90px;
+	width: 200px;
+	margin-left: 50px;
 }
 
 body>ul:first-child {
-	width: 450px;
-	background-color: skyblue;
+	width: 800px;
+	background-color: yellowgreen;
 }
 
 table {
 	text-align: center;
+	width: 800px;
+	height: 500px;
 }
 
 .tb {
@@ -27,112 +32,83 @@ table {
 body {
 	padding-left: 200px;
 }
-function seatnum(){
-var value = $("#btn").val();}
 </style>
 </head>
 <body>
-	<ul class="nav justify-content-end">
-		<li class="nav-item"><a class="nav-link active" href="/seat">ÁÂ¼®º¸±â</a>
-		</li>
-		<li class="nav-item"><a class="nav-link" href="#">¿¹¾àÇöÈ²</a></li>
-		<li class="nav-item"><a class="nav-link" href="/book">¿¹¾àÇÏ±â</a></li>
+	<ul>
+		<li class="nav-item"><a class="nav-link active" href="/seat">ì¢Œì„ë³´ê¸°</a></li>
+		<li class="nav-item"><a class="nav-link" href="/bookcheck">ì˜ˆì•½í˜„í™©</a></li>
+		<li class="nav-item"><a class="nav-link" href="/book">ì˜ˆì•½í•˜ê¸°</a></li>
 	</ul>
-	<h4>½Ä´ç Å×ÀÌºí</h4>
+	<h2>ho's ì‹ë‹¹</h2>
+	<h4>ìš´ì˜ì‹œê°„ :12~19ì‹œ *15ì‹œ~17ì‹œ ë¸Œë ˆì´í¬íƒ€ìž„</h4>
 
 	<table border="1">
 		<thead>
 			<tr>
-				<th colspan="6">º®</th>
+				<th colspan="6">ë²½</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<th rowspan="36">ÁÖ¹æ</th>
+				<th rowspan="36">ì£¼ë°©</th>
 			</tr>
 			<tr>
-				<th>1¹øÅ×ÀÌºí<br>
-					<button id="btn" onclick="location.href = '/book'" onclick = 'seatnum();'>¿¹¾àÇÏ±â</button>
-					
-					<div><br>
-						<a href=#none id="show"
-							onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='¡ãÁ¢±â'} else {hide.style.display='none';show.innerText='¿¹¾àÇöÈ²'}">¿¹¾àÇöÈ²</a>
+				<th>1ë²ˆí…Œì´ë¸”<br>
+					<button value="1" id="btn" onclick="location.href = '/book'">ì˜ˆì•½í•˜ê¸°</button>
+
+					<!--  <div>
+						<br> <a href=#none id="show"
+							onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='â–²ì ‘ê¸°'} else {hide.style.display='none';show.innerText='ì˜ˆì•½í˜„í™©'}">ì˜ˆì•½í˜„í™©</a>
 						<div id="hide" style="display: none">
 							<ul>
-						<li class="tb">11:00~12:00 ¿¹¾à°¡´É</li>
-						<li>12:00~13:00 ¿¹¾àºÒ°¡</li>
-						<li>13:00~14:00 ¿¹¾àºÒ°¡</li>
-						<li>12:00~15:00 ¿¹¾àºÒ°¡</li>
-						<li>12:00~16:00 ¿¹¾àºÒ°¡</li>
-						<li>16:00~17:00 ¿¹¾àºÒ°¡</li>
-						<li>17:00~18:00 ¿¹¾àºÒ°¡</li>
-					</ul>
-						</div>
-					</div>
+								<c:forEach var="cli" items="${cli}">
+										
+										<div>${cli.booktime}ì‹œ ~ ${cli.booktime+1}ì‹œ ì˜ˆì•½ì™„ë£Œ</div>
 
+								</c:forEach>
+							</ul>
+						</div>
+					</div>--> <c:forEach var="cli" items="${cli}">
+
+						<div>${cli.booktime}ì‹œ~${cli.booktime+1}ì‹œ ì˜ˆì•½ì™„ë£Œ</div>
+
+
+						<div>
+							<a href="/bookinfo.do?tablenum=1">ì˜ˆì•½í˜„í™© 
+						</div>
+					</c:forEach>
 				</th>
-				<th>2¹øÅ×ÀÌºí<br>
-					<button id="btn" onclick="location.href = '/book'">¿¹¾àÇÏ±â</button>
-					<p>¿¹¾àÇöÈ²</p>
+				<th>2ë²ˆí…Œì´ë¸”<br>
+					<button id="btn" onclick="location.href = '/book'">ì˜ˆì•½í•˜ê¸°</button>
+					<div>
+						<a href="/bookinfo.do?tablenum=2">ì˜ˆì•½í˜„í™© 
+					</div>
 				</th>
-				<th>3¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
+				<th>3ë²ˆí…Œì´ë¸”
+					<p>ì˜ˆì•½í˜„í™©</p>
 				</th>
-				<th>4¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
+				<th>4ë²ˆí…Œì´ë¸”
+					<p>ì˜ˆì•½í˜„í™©</p>
 				</th>
-				<th rowspan="5">Ã¢¹®</th>
+				<th rowspan="5">ì°½ë¬¸</th>
 			</tr>
 			<tr>
-				<th>5¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
+				<th>5ë²ˆí…Œì´ë¸”
+					<p>ì˜ˆì•½í˜„í™©</p>
 				</th>
-				<th>6¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
+				<th>6ë²ˆí…Œì´ë¸”
+					<p>ì˜ˆì•½í˜„í™©</p>
 				</th>
-				<th>7¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
+				<th>7ë²ˆí…Œì´ë¸”
+					<p>ì˜ˆì•½í˜„í™©</p>
 				</th>
-				<th>8¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-			</tr>
-			<tr>
-				<th>9¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>10¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>11¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>12¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
+				<th>8ë²ˆí…Œì´ë¸”
+					<p>ì˜ˆì•½í˜„í™©</p>
 				</th>
 			</tr>
-			<tr>
-				<th>13¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>14¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>15¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>16¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-			</tr>
-			<tr>
-				<th>17¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th>18¹øÅ×ÀÌºí
-					<p>¿¹¾àÇöÈ²</p>
-				</th>
-				<th colspan="2">ÃâÀÔ¹®</th>
+			<td colspan="2">ì¶œìž…ë¬¸</td>
+			<td colspan="2">ì°½ë¬¸</td>
 			</tr>
 
 		</tbody>

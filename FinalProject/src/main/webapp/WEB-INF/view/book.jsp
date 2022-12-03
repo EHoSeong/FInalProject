@@ -1,61 +1,95 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>ìë¦¬ì˜ˆì•½</title>
 <style>
 body>:first-child>li {
+text-align : center;
 	display: inline-block;
-	width: 90px;
+	width: 200px;
+	margin-left : 50px;
 }
-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
+
 body>ul:first-child {
-	width: 450px;
-	background-color: skyblue;
-}</style>
+	width: 800px;
+	background-color: yellowgreen;
+}
+.name {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+.number {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	width: 100%;
+	border: none;
+}
+
+table {
+	border: solid black;
+	padding-left: 100px;
+	width: 700px;
+	height: 400px;
+	border: black;
+}
+</style>
 </head>
 <body>
-<ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link active" href="/seat">ÁÂ¼®º¸±â</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">¿¹¾àÇöÈ²</a>
-        </li>
+	<ul class="nav justify-content-end">
+		<li class="nav-item"><a class="nav-link active" href="/seat">ì¢Œì„ë³´ê¸°</a>
+		</li>
+		<li class="nav-item"><a class="nav-link" href="/bookcheck">ì˜ˆì•½í˜„í™©</a></li>
 
-      </ul>
-    <fieldset style = "width:300px">
-    <div>
-    
-    </div>
-        <div>¿¹¾à ½Ã°£
-        <select>
-            <option value="10">11:00~12:00</option>
-            <option value="11">12:00~13:00</option>
-            <option value="12">13:00~14:00</option>
-            <option value="13">14:00~15:00</option>
-            <option value="14">15:00~16:00</option>
-            <option value="14">16:00~17:00</option>
-            <option value="14">17:00~18:00</option>
-            </select>
-        </div>
-        <legend>¿¹¾àÁ¤º¸</legend>
-        <div class="textForm">
-            ¿¹¾àÀÚ ¼ºÇÔ: <input name="name" type="text" class="name" placeholder="ÀÌ¸§">
-        </div>
-        <div class="textForm">
-            ÀÎ¿ø ¼ö : <select>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                </select>
-        </div>
-        <div class="textForm">
-            ÀüÈ­¹øÈ£ : <input name="number" type="text" class="number" pattern="[0-9]+" placeholder="ÀüÈ­¹øÈ£">
-        </div>
-    </fieldset>
+	</ul>
+	<form method="post" action="/book.do">
+		<table>
+			<tr>
+				<td>í…Œì´ë¸”ë²ˆí˜¸</td>
+				<td>1ë²ˆ<input type="checkbox" id="ch1" name="tablenum" value="1" /></td>
+				<td>2ë²ˆ<input type="checkbox" id="ch2" name="tablenum" value="2" /></td>
+				<td>3ë²ˆ<input type="checkbox" id="ch3" name="tablenum" value="3" /></td>
+				
+			</tr>
+			<tr>
+				<td>ì˜ˆì•½ ì‹œê°„</td>
+				<td><select name = "booktime">
+						<option value="12">12:00~13:00</option>
+						<option value="13">13:00~14:00</option>
+						<option value="14">14:00~15:00</option>
+						<option disabled value="4">15~17ì‹œëŠ” ë¸Œë ˆì´í¬íƒ€ì„ì…ë‹ˆë‹¤</option>
+						<option value="17">17:00~18:00</option>
+						<option value="18">18:00~19:00</option>
+				</select></td>
+			<tr>
+				<td>ì˜ˆì•½ì ì„±í•¨</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+
+			<tr>
+				<td>ì¸ì›ìˆ˜</td>
+				<td><input type="number" name="people"></td>
+			</tr>
+
+			<tr>
+				<td>ì „í™”ë²ˆí˜¸</td>
+				<td><input name="phonenum" type="text" class="number"
+					pattern="[0-9]+" placeholder="ì „í™”ë²ˆí˜¸(-ë¹¼ê³  ì…ë ¥í•˜ì„¸ìš”)"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" class="btn" value="ì˜ˆì•½í•˜ê¸°" /></td>
+			</tr>
+		</table>
+
+
+
+	</form>
+
 </body>
 </html>
