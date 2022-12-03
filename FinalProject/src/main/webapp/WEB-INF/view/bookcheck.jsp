@@ -15,7 +15,7 @@ body {
 	width: 50%;
 	height: 500px;
 	margin-top: 100px;
-	margin-left: 25%;
+	margin-left: 15%;
 }
 
 table {
@@ -46,6 +46,7 @@ body>ul:first-child {
 	width: 800px;
 	background-color: yellowgreen;
 }
+
 </style>
 </head>
 <body>
@@ -81,8 +82,8 @@ body>ul:first-child {
 			</tr>
 
 		</table>
-
-		<input type="button" value="돌아가기" onclick="history.back(-1)">
-	</div>
+		<button type = "button" onClick="location.href='/delete.do?phonenum=${cli.phonenum}'">삭제하기</button>
+		<button type = "button" onClick="location.href='/seat'">돌아가기</button>
+		
 </body>
 </html>

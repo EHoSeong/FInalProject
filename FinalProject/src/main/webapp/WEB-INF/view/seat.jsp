@@ -71,18 +71,13 @@ body {
 						</div>
 					</div>--> <c:forEach var="cli" items="${cli}">
 
-						<div>${cli.booktime}시~${cli.booktime+1}시 예약완료</div>
+						<div>${cli.booktime}시~ ${cli.booktime+1}시 예약완료</div>
 
-
-						<div>
-							<a href="/bookinfo.do?tablenum=1">예약현황 
-						</div>
 					</c:forEach>
-				</th>
 				<th>2번테이블<br>
 					<button id="btn" onclick="location.href = '/book'">예약하기</button>
 					<div>
-						<a href="/bookinfo.do?tablenum=2">예약현황 
+						<a href="/seatinfo.do?tablenum=2">예약현황 
 					</div>
 				</th>
 				<th>3번테이블
@@ -107,8 +102,8 @@ body {
 					<p>예약현황</p>
 				</th>
 			</tr>
-			<td colspan="2">출입문</td>
-			<td colspan="2">창문</td>
+			<th colspan="2">출입문</th>
+			<th colspan="2">창문</th>
 			</tr>
 
 		</tbody>

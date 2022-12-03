@@ -45,7 +45,7 @@ public class BookController {
 	@RequestMapping(value = "/bookcheck.do", method = RequestMethod.GET)
 	public String getClient(Model model, @RequestParam(value = "phonenum", required = false, defaultValue = "0") String phonenum) {
 
-		List<Client> cli = clidb.select(phonenum);
+		Client cli = clidb.select(phonenum);
 		model.addAttribute("cli", cli);
 		return "/bookcheck";
 	}
@@ -60,5 +60,10 @@ public class BookController {
 	public String bookcheck(@ModelAttribute Client ret, Model model) {
 		model.addAttribute("msg", ret);
 		return "/checkbook";
+	}
+	@RequestMapping(value = "/delete.do", method = RequestMethod.GET)
+	public String delete(@RequestParam(value = "phonenum", required = true) String phonenum) {
+		clidb.delete(phonenum);
+		return "redirect:/seat";
 	}
 }

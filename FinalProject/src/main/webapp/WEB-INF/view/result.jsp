@@ -11,6 +11,7 @@ body {
 	margin-left: 200px;
 	padding-top: 20px;
 }
+
 .check {
 	width: 50%;
 	height: 500px;
@@ -36,10 +37,10 @@ input[type="button"] {
 }
 
 body>:first-child>li {
-text-align : center;
+	text-align: center;
 	display: inline-block;
 	width: 200px;
-	margin-left : 50px;
+	margin-left: 50px;
 }
 
 body>ul:first-child {
@@ -81,7 +82,7 @@ body>ul:first-child {
 			</tr>
 
 		</table>
-
+		<input type="button" value="삭제"><a href="delete.do"></a>
 		<input type="button" value="돌아가기" onclick="history.back(-1)">
 	</div>
 </body>

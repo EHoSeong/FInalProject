@@ -33,12 +33,14 @@ body>ul:first-child {
 }
 
 table {
-	border: solid black;
+	border: 1px solid black;
 	padding-left: 100px;
-	width: 700px;
+	width: 800px;
 	height: 400px;
 	border: black;
 }
+table>tr{
+width : 20px;}
 </style>
 </head>
 <body>
@@ -51,10 +53,15 @@ table {
 	<form method="post" action="/book.do">
 		<table>
 			<tr>
-				<td>테이블번호</td>
-				<td>1번<input type="checkbox" id="ch1" name="tablenum" value="1" /></td>
-				<td>2번<input type="checkbox" id="ch2" name="tablenum" value="2" /></td>
-				<td>3번<input type="checkbox" id="ch3" name="tablenum" value="3" /></td>
+				<td>테이블번호</td><td></td>
+				<td>1번<input type="checkbox" name="tablenum" value="1" /></td>
+				<td>2번<input type="checkbox" name="tablenum" value="2" /></td>
+				<td>3번<input type="checkbox" name="tablenum" value="3" /></td>
+				<td>4번<input type="checkbox" name="tablenum" value="4" /></td>
+				<td>5번<input type="checkbox" name="tablenum" value="5" /></td>
+				<td>6번<input type="checkbox" name="tablenum" value="6" /></td>
+				<td>7번<input type="checkbox" name="tablenum" value="7" /></td>
+				<td>8번<input type="checkbox" name="tablenum" value="8" /></td>
 				
 			</tr>
 			<tr>

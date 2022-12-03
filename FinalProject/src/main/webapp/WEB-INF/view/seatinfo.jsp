@@ -6,19 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<body>
 <table>
-	<c:forEach var="cli" items="${cli}">
+
 		<tr>
-			<td><input type="checkbox" value=${ad_n.seq}></td>
 			<td>${cli.tablenum}</td>
 			<td>${cli.name}</td>
 			<td>${cli.phonenum}</td>
 		</tr>
-	</c:forEach>
+
 </table>
 
 </head>
-<body>
+
 
 </body>
 </html>
