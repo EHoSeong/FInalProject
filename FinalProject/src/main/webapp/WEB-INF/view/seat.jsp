@@ -80,25 +80,32 @@ body {
 						<a href="/seatinfo.do?tablenum=2">예약현황 
 					</div>
 				</th>
-				<th>3번테이블
+				<th>3번테이블<br>
+				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
 					<p>예약현황</p>
 				</th>
-				<th>4번테이블
+				
+				<th>4번테이블<br>
+				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
 					<p>예약현황</p>
 				</th>
 				<th rowspan="5">창문</th>
 			</tr>
 			<tr>
-				<th>5번테이블
+				<th>5번테이블<br>
+				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
 					<p>예약현황</p>
 				</th>
-				<th>6번테이블
+				<th>6번테이블<br>
+				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
 					<p>예약현황</p>
 				</th>
-				<th>7번테이블
+				<th>7번테이블<br>
+				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
 					<p>예약현황</p>
 				</th>
-				<th>8번테이블
+				<th>8번테이블<br>
+				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
 					<p>예약현황</p>
 				</th>
 			</tr>

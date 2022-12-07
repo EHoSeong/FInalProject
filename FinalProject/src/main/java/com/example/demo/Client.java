@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Client {
 	private int seq;
-	private String tablenum;
+	private int tablenum;
 	private int booktime;
 	private int people;
 	private String name;
@@ -35,11 +35,11 @@ public class Client {
 		this.seq = seq;
 	}
 
-	public String getTablenum() {
+	public int getTablenum() {
 		return tablenum;
 	}
 
-	public void setTablenum(String tablenum) {
+	public void setTablenum(int tablenum) {
 		this.tablenum = tablenum;
 	}
 
