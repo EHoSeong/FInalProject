@@ -41,6 +41,15 @@ table {
 }
 table>tr{
 width : 20px;}
+table>tr>td:nth-child(2){
+width : 10px;
+}
+
+
+input[type="checkbox"]{
+	width:10px;
+	height:20px;
+}
 </style>
 </head>
 <body>
@@ -53,15 +62,15 @@ width : 20px;}
 	<form method="post" action="/book.do">
 		<table>
 			<tr>
-				<td>테이블번호</td><td></td>
-				<td>1번<input type="checkbox" name="tablenum" value="1" /></td>
-				<td>2번<input type="checkbox" name="tablenum" value="2" /></td>
-				<td>3번<input type="checkbox" name="tablenum" value="3" /></td>
-				<td>4번<input type="checkbox" name="tablenum" value="4" /></td>
-				<td>5번<input type="checkbox" name="tablenum" value="5" /></td>
-				<td>6번<input type="checkbox" name="tablenum" value="6" /></td>
-				<td>7번<input type="checkbox" name="tablenum" value="7" /></td>
-				<td>8번<input type="checkbox" name="tablenum" value="8" /></td>
+				<td>테이블번호</td>
+				<td>1번<input type="checkbox" name="tablenum" value="1"/>
+				2번<input type="checkbox" name="tablenum" value="2" />
+				3번<input type="checkbox" name="tablenum" value="3" />
+				4번<input type="checkbox" name="tablenum" value="4" />
+				5번<input type="checkbox" name="tablenum" value="5" />
+				6번<input type="checkbox" name="tablenum" value="6" />
+				7번<input type="checkbox" name="tablenum" value="7" />
+				8번<input type="checkbox" name="tablenum" value="8" /></td>
 				
 			</tr>
 			<tr>

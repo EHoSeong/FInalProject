@@ -56,58 +56,56 @@ body {
 			<tr>
 				<th>1번테이블<br>
 					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-
-					<!--  <div>
+					<br> <a href="/seatinfo1">예약현황</a> <!-- <div>
 						<br> <a href=#none id="show"
 							onclick="if(hide.style.display=='none') {hide.style.display='';show.innerText='▲접기'} else {hide.style.display='none';show.innerText='예약현황'}">예약현황</a>
 						<div id="hide" style="display: none">
 							<ul>
-								<c:forEach var="cli" items="${cli}">
-										
-										<div>${cli.booktime}시 ~ ${cli.booktime+1}시 예약완료</div>
+								<c:forEach var="cli1" items="${cli1}">
+
+									<div>${cli1.booktime}시~${cli1.booktime+1}시 예약완료</div>
 
 								</c:forEach>
 							</ul>
 						</div>
-					</div>--> <c:forEach var="cli" items="${cli}">
-
-						<div>${cli.booktime}시~ ${cli.booktime+1}시 예약완료</div>
-
-					</c:forEach>
+					</div>!-->
 				<th>2번테이블<br>
-					<button id="btn" onclick="location.href = '/book'">예약하기</button>
-					<div>
-						<a href="/seatinfo.do?tablenum=2">예약현황 
-					</div>
+					<button id="btn" onclick="location.href = '/book'">예약하기</button> <br>
+					<a href="/seatinfo2">예약현황</a>
 				</th>
 				<th>3번테이블<br>
-				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-					<p>예약현황</p>
+					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
+					<br>
+				<a href="/seatinfo3">예약현황</a>
 				</th>
-				
+
 				<th>4번테이블<br>
-				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-					<p>예약현황</p>
+					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
+					<br>
+				<a href="/seatinfo4">예약현황</a>
 				</th>
 				<th rowspan="5">창문</th>
 			</tr>
 			<tr>
 				<th>5번테이블<br>
-				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-					<p>예약현황</p>
+					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
+					<br>
+				<a href="/seatinfo5">예약현황</a>
 				</th>
 				<th>6번테이블<br>
-				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-					<p>예약현황</p>
+					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
+					<br>
+				<a href="/seatinfo6">예약현황</a>
 				</th>
 				<th>7번테이블<br>
-				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-					<p>예약현황</p>
+					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
+					<br>
+				<a href="/seatinfo7">예약현황</a>
 				</th>
 				<th>8번테이블<br>
-				<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
-					<p>예약현황</p>
-				</th>
+					<button value="1" id="btn" onclick="location.href = '/book'">예약하기</button>
+					<br>
+				<a href="/seatinfo8">예약현황</a>
 			</tr>
 			<th colspan="2">출입문</th>
 			<th colspan="2">창문</th>
