@@ -136,12 +136,6 @@ public class BookController {
 		return "/seatinfo";
 	}
 
-	@RequestMapping(value = "/check.info", method = RequestMethod.POST)
-	public String bookcheck(@ModelAttribute Client ret, Model model) {
-		model.addAttribute("msg", ret);
-		return "/checkbook";
-	}
-
 	@RequestMapping(value = "/delete.do", method = RequestMethod.GET)
 	public String delete(@RequestParam(value = "phonenum", required = true) String phonenum) {
 		clidb.delete(phonenum);
